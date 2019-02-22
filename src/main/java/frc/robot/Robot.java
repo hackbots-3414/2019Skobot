@@ -106,21 +106,21 @@ public class Robot extends IterativeRobot {
     l1.set(ControlMode.PercentOutput, left.getY());
     l2.set(ControlMode.PercentOutput, left.getY());
     l3.set(ControlMode.PercentOutput, left.getY());
-    r1.set(ControlMode.PercentOutput, left.getY());
-    r2.set(ControlMode.PercentOutput, left.getY());
-    r3.set(ControlMode.PercentOutput, left.getY());
+    r1.set(ControlMode.PercentOutput, right.getY());
+    r2.set(ControlMode.PercentOutput, right.getY());
+    r3.set(ControlMode.PercentOutput, right.getY());
     
-    if (pad.getRawButton(0)) {
+    if (pad.getRawButton(1)) {
       agitator.set(ControlMode.PercentOutput, -0.25);
     } else {
       agitator.set(ControlMode.PercentOutput, 0);
     }
-    if (pad.getRawButton(1)) {
+    if (pad.getRawButton(2)) {
       shooter.set(ControlMode.PercentOutput, 1.00);
     } else {
       shooter.set(ControlMode.PercentOutput, 0);
     }
-    if (pad.getRawButton(3) {
+    if (pad.getRawButton(4)) {
       intake.set(ControlMode.PercentOutput, -1.00);
     } else {
       intake.set(ControlMode.PercentOutput, 0);
